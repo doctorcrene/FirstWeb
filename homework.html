@@ -5,43 +5,36 @@
     <title>推广页面</title>
     <link href="homework1.css" rel="stylesheet" type="text/css">
     <script>
-        function cont(num) {
-            if(num<16)
-            {
-                temp=document.getElementById(num);
-                temp.style.display="inherit";
-            }
-            else
-            {
-                temp=document.getElementById(16);
-                temp.style.display="inherit";
-            }
+        var i=0;
+        function start() {
+            setInterval("cont(i)",3000);
+        }
+        function cont(ii) {
+            var temp;
+            temp=document.getElementById(ii.toString());
+            temp.style.display="inherit";
+            i++;
         }
     </script>
 </head>
 <body>
-<p class="te" onclick="cont(1)">那时候，这个国家还有季节……<br></p>
-<p class="te" id="1" style="display: none" onclick="cont(2)">秋天的存在</p>
-<p class="te" id="2" style="display: none" onclick="cont(3)">“真的吗？”</p>
-<p class="te" id="3" style="display: none" onclick="cont(4)">“是的。”</p>
-<p class="te" id="4" style="display: none" onclick="cont(5)">“我正在和六分仪先生交往”</p>
-<p class="te" id="5" style="display: none" onclick="cont(6)">听到这件事的时候，我无法掩饰自己的惊讶</p>
-<p class="te" id="6" style="display: none" onclick="cont(7)">“没想到你会和那个男人走在一起。”</p>
-<p class="te" id="7" style="display: none" onclick="cont(8)">“怎么啦，冬月老师？”</p>
-<p class="te" id="8" style="display: none" onclick="cont(9)">“他是一个很可爱的人喔。”</p>
-<p class="te" id="9" style="display: none" onclick="cont(10)">“只是大家都不知道而已。”</p>
-<p class="te" id="10" style="display: none" onclick="cont(11)">“不知道或许比较幸福。”</p>
-<p class="te" id="11" style="display: none" onclick="cont(12)">“介绍您给他，让您感到困扰吗？”</p>
-<p class="te" id="12" style="display: none" onclick="cont(13)">“不会，我承认他是个有趣的男人。”</p>
-<p class="te" id="13" style="display: none" onclick="cont(14)">“只是我做不到喜欢他。”</p>
-<p class="te" id="14" style="display: none" onclick="cont(15)">不过，同好间都认为他的目的是为了得到唯的才能</p>
-<p class="te" id="15" style="display: none" onclick="cont(16)">以及接近她背后的某个组织</p>
-<button type="button" style="display: none" id="16" onclick=""></button>
-<audio src="audio/1.mp3" autoplay loop>emmmmmmmmmmm</audio>
-
-<h1></h1>
-<p></p>
-
+<p class="te" id="0" style="padding-left: 60px;display: none">那时候，这个国家还有季节……<br></p>
+<p class="te" id="1" style="padding-left: 60px;display: none">秋天的存在</p>
+<p class="te" id="2" style="padding-left: 60px;display: none">“真的吗？”</p>
+<p class="te" id="3" style="padding-left: 60px;display: none">“是的。”</p>
+<p class="te" id="4" style="padding-left: 60px;display: none">“我正在和六分仪先生交往”</p>
+<p class="te" id="5" style="padding-left: 60px;display: none">听到这件事的时候，我无法掩饰自己的惊讶</p>
+<p class="te" id="6" style="padding-left: 60px;display: none">“没想到你会和那个男人走在一起。”</p>
+<p class="te" id="7" style="padding-left: 60px;display: none">“怎么啦，冬月老师？”</p>
+<p class="te" id="8" style="padding-left: 60px;display: none">“他是一个很可爱的人喔。”</p>
+<p class="te" id="9" style="padding-left: 60px;display: none">“只是大家都不知道而已。”</p>
+<p class="te" id="10" style="padding-left: 60px;display: none">“不知道或许比较幸福。”</p>
+<p class="te" id="11" style="padding-left: 60px;display: none">“介绍您给他，让您感到困扰吗？”</p>
+<p class="te" id="12" style="padding-left: 60px;display: none">“不会，我承认他是个有趣的男人。”</p>
+<p class="te" id="13" style="padding-left: 60px;display: none">“只是我做不到喜欢他。”</p>
+<p class="te" id="14" style="padding-left: 60px;display: none">不过，同好间都认为他的目的是为了得到唯的才能</p>
+<p class="te" id="15" style="padding-left: 60px;display: none">以及接近她背后的某个组织</p>
+<audio src="audio/1.mp3" onloadeddata="start()" autoplay loop>emmmmmmmmmmm</audio>
 
 
 </body>
