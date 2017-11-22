@@ -2,7 +2,10 @@ body{
     background-image: url(img/bak.jpg);
     background-size: cover;
 }
-p.te{
+
+p{
+    padding-left: 60px;
+    display: none;
     color: #FFF0F5;
     line-height: 1.3;
     font-size: large;

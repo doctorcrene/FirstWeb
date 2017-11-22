@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>百度一下，你就知道</title>
+    <link rel="stylesheet" href="homework2.css">
+    <script>
+        function ChangeBorder() {
+            i=document.getElementById("kuang");
+            i.style.borderColor="#4791ff";
+            j=document.getElementById("shuru");
+            j.style.border="none";
+        }
+    </script>
+</head>
+<body>
+<div id="top">
+    <a href="http://news.baidu.com">新闻</a>
+    <a href="http://map.baidu.com">地图</a>
+    <a href="http://v.baidu.com">视频</a>
+    <a href="http://tieba.baidu.com">贴吧</a>
+    <a href="http://xueshu.baidu.com">学术</a>
+    <a style="display: inline-block" href="https://passport.baidu.com/v2/?login&amp;tpl=mn&amp;u=http%3A%2F%2Fwww.baidu.com%2F">登录</a>
+    <a style="display: inline-block" href="http://www.baidu.com/gaoji/preferences.html">设置</a>
+    <a style="display: block" href="http://www.baidu.com/more/">更多产品</a>
+</div>
+
+<div style="text-align: center" id="pic">
+        <img width="270" height="129" style="text-align: center" src="img/bd_logo1.png" alt="百度一下，你就知道"/>
+</div>
+
+<div id="outer"  style="text-align: center">
+    <span id="kuang"  style="text-align: center">
+        <input id="shuru" onfocus="ChangeBorder()" style="text-align: left;border: none" type="text" maxlength="255">
+        <img id="camera" src="img/camera.png" alt="">
+    </span>
+    <button>百度一下</button>
+</div>
+
+<div id="binary" style="text-align: center">
+    <img src="img/erweima.png" alt="二维码">
+</div>
+<div style="text-align: center;height: 22px">
+    <p style="display: inline-block">
+        <a class="under" href="//www.baidu.com/cache/sethelp/help.html" target="_blank">把百度设为主页</a>
+        <a class="under" href="http://home.baidu.com">关于百度</a>
+        <a class="under" href="http://ir.baidu.com">About  Baidu</a>
+        <a class="under" href="http://e.baidu.com/?refer=888">百度推广</a>
+    </p>
+</div>
+<div  style="text-align: center;margin-top: 5px">
+    <p class="under" style="display: inline-block">
+        ©2017 Baidu
+        <a class="under" href="http://www.baidu.com/duty/">使用百度前必读</a>
+        <a class="under" href="http://jianyi.baidu.com/">意见反馈</a>
+        京ICP证030173号
+        <a class="under" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11000002000001" target="_blank">京公网安备11000002000001号</a>
+    </p>
+</div>
+
+
+
+</body>
+</html>
+
+
