@@ -1,0 +1,44 @@
+input{
+    display: inline-block;
+    height:80px;
+    width: 80px;
+    margin: 5px;
+    font-size: large;
+    border-color: crimson;
+    background-color: #62c7ff;
+}
+
+input:focus{
+    background-color: coral;
+}
+
+#output_border{
+    display: inline-block;
+    border-style: groove;
+    border-color: crimson;
+}
+
+div{
+    margin-top: 50px;
+    display: inline-block;
+    border-style: groove;
+    border-color: #333333;
+}
+
+#output{
+    width: 260px;
+    height: 60px;
+    font-weight: 900;
+    font-size: large;
+    border-style:none;
+    text-align: right;
+    background-color: white;
+}
+
+#add{
+    height: 160px;
+}
+
+.long{
+    height: 160px;
+}
