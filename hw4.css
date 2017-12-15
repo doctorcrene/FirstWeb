@@ -1,0 +1,56 @@
+form {
+    display: inline-block;
+    margin-top: 100px;
+    margin-left: 40px;
+}
+
+input {
+    display: inline-block;
+    margin-top: 30px;
+}
+
+span {
+    display: inline-block;
+    width: 100px;
+}
+
+#errorsign {
+    text-align: left;
+    margin-top: 30px;
+    display: none;
+    color: crimson;
+}
+
+#up {
+    display: inline-block;
+    float: right;
+    width: 80px;
+    height: 30px;
+    background-color: #62c7ff;
+    border-style: none;
+}
+
+#show {
+    display: inline-block;
+    float: right;
+    margin-top: 150px;
+    margin-right: 50px;
+}
+
+td {
+    display: inline-block;
+    width: 150px;
+    text-align: center;
+}
+
+tr {
+    /*display: inline-block;*/
+    height: 40px;
+}
+
+#illustration {
+    display: inline-block;
+    font-weight: 500;
+    float: right;
+    font-size: small;
+}
