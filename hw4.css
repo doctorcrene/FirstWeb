@@ -48,7 +48,8 @@ tr {
     height: 40px;
 }
 
-#illustration {
+#illustration
+{
     display: inline-block;
     font-weight: 500;
     float: right;

@@ -3,25 +3,18 @@ let number1=0;
 let number2=0;
 let symbol;
 let result;
-let i=4;
+let i=0;j=0;
 
-function createdata() {
+function createdata(number1,symbol,number2,result) {
     let a={};
-    a.number1=0;
-    a.symbol=0;
-    a.number2=0;
-    a.result=0;
+    a.number1=number1;
+    a.symbol=symbol;
+    a.number2=number2;
+    a.result=result;
     return a;
 }
 
 let memory;
-
-memory[0]=createdata();
-memory[1]=createdata();
-memory[2]=createdata();
-memory[3]=createdata();
-memory[4]=createdata();
-
 
 function insert(a) {
     let temp=document.getElementById("output");
@@ -36,6 +29,7 @@ function insert(a) {
         number2+=a;
     }
     temp.value=number2;
+    j=0;
 }
 
 function clears() {
@@ -44,6 +38,7 @@ function clears() {
     number1=0;
     number2=0;
     symbol=0;
+    j=0;
 }
 
 function Delete() {
@@ -53,6 +48,7 @@ function Delete() {
     number-=end;
     number/=10;
     temp.value=number;
+    j=0;
 }
 
 function cal(a) {
@@ -61,9 +57,10 @@ function cal(a) {
     number1=number2;
     number2=0;
     temp.value=0;
+    j=0;
 }
 
-function euqal() {
+function equal() {
     let temp=document.getElementById("output");
     switch(symbol)
     {
@@ -75,30 +72,35 @@ function euqal() {
     }
     temp.value=result;
 
-    if(i===0)
-    {
-        for(let j=1;j<3;j++)
-        {
-            memory[j+1]=memory[j];
-        }
-    }
-    memory[i].number1=number1;     //记忆
-    memory[i].symbol=symbol;
-    memory[i].number2=number2;
-    memory[i].result=result;
-    if(i>0)
-    {
-        i--;
-    }
-
+    memory[i]=createdata(number1,symbol,number2,result);
+    temp.value=memory[i].number1.toString()+memory[i].symbol;
 
     number1=0;
     number2=result;
     symbol=0;
     result=0;
-
+    j=0;
 }
 
-function PrintMemory() {
+function printf() {
+    if(j<=i)
+    {
+        let temp=document.getElementById("output");
+        temp.value=memory[j].number1;
 
+        number1=0;
+        number2=0;
+        symbol=0;
+        result=0;
+    }
+    if(j===i){}
+    else
+        j++;
+}
+
+function dot() {
+    let temp=document.getElementById("output");
+    let a=temp.value;
+    temp.value=a+'.';
+    j=0;
 }

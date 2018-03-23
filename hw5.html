@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>complicated</title>
+    <script>
+
+
+        function up(a) {
+            let data = {
+                username,
+                password
+            };
+
+            let temp;
+            temp = document.getElementById("UserName");
+            data.username = temp.value;
+            temp = document.getElementById("PassWord");
+            data.password = temp.value;
+
+            let xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    if (xhr.status >= 200 && xhr.status < 300 || xhr.status === 304) {
+                        alert(xhr.responseText);
+                    }
+                    else {
+                        alert("Request was unsuccessful:" + xhr.status);
+                    }
+                }
+            };
+
+            let myHeaders=xhr.getResponseHeader("myHeaders");
+            let allHeaders = xhr.getAllResponseHeaders();
+
+            xhr.open("post", "", Boolean(a));
+            xhr.setRequestHeader(myHeaders,allHeaders);
+            xhr.send(JSON.stringify(data));
+        }
+
+
+    </script>
+
+</head>
+<body>
+<form style="display: inline-block;position: absolute;left: 50%;top: 50%;">
+    <span>用户名</span>
+    <input id="UserName" type="text">
+    <br><br>
+    <span>密码</span>
+    <input id="PassWord" type="text">
+    <br>
+    <button style="display:inline-block;margin: 10px;height: 40px" onclick="up(0)">同步</button>
+    <br>
+    <button style="display:inline-block;margin: 10px;height: 40px" onclick="up(1)">异步</button>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OurEDA Lab</title>
+    <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/ie10-viewport-bug-workaround.css">
+    <script src="jquery.js"></script>
+    <link rel="icon" href="img/icon.png">
+    <link rel="stylesheet" href="home_always.css">
+</head>
+<body>
+<div class="header">
+    <img id="img" src="img/head.png" alt="">
+    <form id="search" action="">
+        <a href="login.html">sign in</a>
+        <span>/</span>
+        <a href="login.html">register</a>
+        <label for="search"></label>
+        <input type="text" id="search-input" placeholder="search" class="form-control">
+        <button class="btn btn-default">GO!</button>
+    </form>
+</div>
+
+<nav style="margin-bottom: 0" class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">OurEDA</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="ios.html">IOS</a></li>
+                <li><a href="android.html">ANDROID</a></li>
+                <li><a href="web.html">WEB</a></li>
+                <li><a href="es.html">EMBEDDED SYSTEM</a></li>
+                <li><a href="ui.html">UI/DM</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="site-wrapper">
+    <div class="site-wrapper-inner">
+        <div class="cover-container">
+            <img id="background" src="img/bg.png" alt="">
+            <div id="knowmore_container">
+                <div id="icon-container">
+                    <img id="icon" src="img/icon.png" alt="">
+                </div>
+                <p>Welcome to OurEDA laboratory!</p>
+                <button id="knowmore" type="button" class="btn-danger btn btn-lg" onclick="start()">Click HERE to get further information</button>
+            </div>
+            <div class="bgv-container">
+                <video class="bgv" loop="loop" autoplay="autoplay" src="video/AE-Plexus-1080i-Animated-Wallpaper.mp4">
+                    Sorry,your browser does not support this function.
+                </video>
+            </div>
+            <div id="guochang1" class="guochang">
+                <p id="guochang1-s">The OurEDA Laboratory is divided into five groups</p>
+                <p id="guochang1-p">(Click on the images to get further information)</p>
+            </div>
+            <div class="fort-container">
+                <div id="1" class="fort">
+                    <a href="ios.html">
+                        <div class="fort-inner" style="background-image: url(img/3.png)">
+                            <div class="p-container">
+                                <p>IOS</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div id="2" class="fort">
+                    <a href="android.html">
+                        <div class="fort-inner" style="background-image: url(img/5.png)">
+                            <div class="p-container">
+                                <p>ANDROID</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div id="3" class="fort">
+                    <a href="web.html">
+                        <div class="fort-inner" style="background-image: url(img/1.png)">
+                            <div class="p-container">
+                                <p>WEB</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div id="4" class="fort">
+                    <a href="es.html">
+                        <div class="fort-inner" style="background-image: url(img/4.png)">
+                            <div class="p-container">
+                                <p>E-SYSTEM</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div id="5" class="fort">
+                    <a href="ui.html">
+                        <div class="fort-inner" style="background-image: url(img/2.png)">
+                            <div class="p-container">
+                                <p>UI/DM</p>
+                                <p></p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="test-area"></div>
+            <footer class="footer">
+                <div class="container">
+                    <div class="bottom-container">
+                        <div class="bottom">
+                            <div class="bottom-sheet">
+                                <p class="bottom-title">What we did</p>
+                                <p>A project</p>
+                                <p>Another project</p>
+                            </div>
+                            <div class="bottom-sheet">
+                                <p class="bottom-title">Contact us</p>
+                                <p>mail@OurEDA.com</p>
+                                <p>I dunno what i'm talking about</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#1').hide();
+        $('#2').hide();
+        $('#3').hide();
+        $('#4').hide();
+        $('#5').hide();
+        $('#guochang1-s').hide();
+        $('#guochang1-p').hide();
+        $('.bgv-container').hide();
+    });
+    $('#knowmore').click(function () {
+        $('.bgv-container').show();
+        $('.test-area').css({'height':'440px'});
+        $('html,body').animate({scrollTop:800},1000);
+        $('#guochang1-s').fadeIn(1000);
+        $('#1').fadeIn(1000);
+        $('#2').fadeIn(2000);
+        $('#3').fadeIn(3000);
+        $('#4').fadeIn(4000);
+        $('#5').fadeIn(5000);
+        setTimeout("$('#guochang1').animate({top:520})" ,3000);
+        setTimeout("$('#guochang1-s').html('Members of each group are all experts in their profession');",3200);
+        setTimeout("$('#guochang1-s').css({'font-size':'36px','font-weight':'700','color':'white','z-index':'9999'})",3200);
+        setTimeout("$('#guochang1-p').css({'font-size':'20px','position':'relative','left':'20%'})",4999);
+        setTimeout("$('#guochang1-p').fadeIn(1000)",5000);
+    });
+</script>
+</body>
+</html>
