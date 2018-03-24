@@ -23,8 +23,8 @@
                 <img src="img/login-icon.png" alt="">
             </a>
             <p>JOIN OurEDA</p>
-            <input type="text" placeholder="Email address/OurEDA ID">
-            <input type="text" placeholder="Password">
+            <input type="text" id="email" onblur="con()"  placeholder="Email address/OurEDA ID">
+            <input type="password" placeholder="Password">
             <div class="button-container">
                 <div class="btn-inner">
                     <button class="btn btn-lg btn-primary">注册</button>
@@ -37,4 +37,24 @@
     </div>
 </div>
 </body>
+<script>
+    let a=new RegExp(/\w+@(\w+\.)+\w+/);
+//    $('#email').onblur(function () {
+//        if(a.test($('email').innerHTML)===false)
+//            alert('false');
+//    });
+
+
+
+//    $('#email').onfocus
+    function con() {
+//            $('#email').onblur=function () {
+        let b=$('email').innerHTML;
+        alert(b);
+            if(a.test(b)===false)
+//            alert(1);
+            alert('false');
+//    }
+    }
+</script>
 </html>
